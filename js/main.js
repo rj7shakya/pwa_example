@@ -11,7 +11,7 @@ const afterLoading = () => {
         console.log(app.url);
         console.log(app.id);
         if (app.id === 'com.novelty.medicaid') {
-          window.location = 'medicaid://host';
+          window.location.href = 'medicaid://host';
         }
       }
     });
