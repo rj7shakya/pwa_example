@@ -1,6 +1,7 @@
 const afterLoading = () => {
   ('use strict');
   console.log(navigator.getInstalledRelatedApps);
+  let linkObject = document.getElementById('link');
 
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./service-worker.js');
@@ -12,7 +13,11 @@ const afterLoading = () => {
         console.log(app.id);
         if (app.id === 'com.novelty.medicaid') {
           window.location.href = 'medicaid://host';
+          linkObject.innerHTML = 'GO TO THE APP';
         }
+      }
+      if (linkObject.innerHTML == '') {
+        linkObject.innerHTML = 'DOWNLOAD APP';
       }
     });
   }
