@@ -12,7 +12,7 @@ const afterLoading = () => {
         console.log(app.url);
         console.log(app.id);
         if (app.id === 'com.novelty.medicaid') {
-          window.location.href = 'medicaid://host';
+          // window.location.href = 'medicaid://host';
           linkObject.innerHTML = 'GO TO THE APP';
         }
       }
